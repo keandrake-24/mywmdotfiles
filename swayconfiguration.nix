@@ -2,20 +2,19 @@
 
 {
     # Enable the sway window manager
-    services.sway = {
+    programs.sway = {
         enable = true;
-        extraPackages = with pkgs; [
-            xorg.xwayland
-        ];
     };
 
     environment.systemPackages = with pkgs; [ rofi ];
 
     # Enable xdg-desktop-portal for Wayland
-    services.xdg.portal = {
+    xdg.portal = {
         enable = true;
         extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
+        wlr.enable = true;
     };
+    services.xdg-desktop-portal-wlr.enable = true;
 
     # Optional: Set environment variables for Wayland
     environment.variables = {

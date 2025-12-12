@@ -42,7 +42,7 @@
          "format": "{name}: {icon}",
          "format-icons": {
              "urgent": "",
-             "active": "",
+             "focused": "",
              "default": ""
          }
      },

@@ -13,20 +13,19 @@
         lolcat # a must definitely
         fastfetch # also a must
         ranger # eh this is pretty good not necessary to have a TUI file manager
-        thunar #your file manager
+        xfce.thunar #your file manager
         networkmanagerapplet #the applet
         google-chrome #your browser
-        noto-fonts #fonts
-        noto-fonts-cjk
-        noto-fonts-emoji
-        shotman #a lightweight screenshotter
+        adwaita-icon-theme
+    shotman #a lightweight screenshotter
         dunst #lightweight notification daemon
-        auto-cpufreq #optimize battery to insane heights (this improved my thinkpad with horrible battery that could go from 20% to 0% under load to last around 4 hours)
-        pipewire #dont you want audio?
+        auto-cpufreq #optimize battery
+        pipewire #audio
         pulsemixer #dont you want to control your audio?
-        pactl #audio again
         brightnessctl #controlling your brigtness
     ];
+    console.packages = with pkgs; [ terminus_font ];
+    console.font = "Lat2-Terminus16";
     services.pipewire = {
         enable = true;
         alsa.enable = true;
@@ -35,12 +34,22 @@
     systemd.services.auto-cpufreq = {
         enable = true;
         serviceConfig = {
-            Res# Example: GDM supports Waylandtart = "always";
-        }
-    }
+            Restart = "always";
+        };
+    };
+    fonts.fontconfig.enable = true;
+    fonts.packages = with pkgs; [
+        font-awesome #allows text icons for waybar
+        jetbrains-mono
+        noto-fonts 
+        noto-fonts-cjk
+        noto-fonts-emoji
+    ];
 
     # Enable the X server
     services.xserver.enable = true;
+
+    programs.xwayland.enable = true;
      
     services.displayManager.ly.enable = true; 
 }
