@@ -3,23 +3,17 @@
 {
     imports = [
         ./swayconfiguration.nix
+        ./extra-apps.nix
     ];
     # System packages
     environment.systemPackages = with pkgs; [
-        # Add your program dependencies here, for example:
         alacritty #your terminal
         waybar #your taskbar 
-        nwg-look #your gtk theme installer
-        lolcat # a must definitely
-        fastfetch # also a must
-        ranger # eh this is pretty good not necessary to have a TUI file manager
         xfce.thunar #your file manager
         networkmanagerapplet #the applet
-        google-chrome #your browser
         adwaita-icon-theme
         arc-theme
-        htop
-    shotman #a lightweight screenshotter
+        shotman #a lightweight screenshotter
         dunst #lightweight notification daemon
         auto-cpufreq #optimize battery
         pipewire #audio
