@@ -1,6 +1,3 @@
-// @import "catppuccin-latte"
-// @import "catppuccin-frappe"
-//@import "/home/keandrerafael/.config/rofi/catppuccin-macchiato.rasi"
 @import "catppuccin-mocha"
 
 * {

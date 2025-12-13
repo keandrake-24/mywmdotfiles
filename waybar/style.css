@@ -44,14 +44,12 @@
   border-radius: 0.2rem;
 }
 
-#custom-music,
 #tray,
 #backlight,
 #clock,
 #battery,
-#pulseaudio,
-#custom-lock,
-#custom-power {
+#pulseaudio
+{
   background-color: @surface0;
   padding: 0.5rem 1rem;
   margin: 5px 0;
@@ -96,4 +94,5 @@
 
 #tray {
  border-radius: 0.2rem;
+ margin-right: 1rem;
 }

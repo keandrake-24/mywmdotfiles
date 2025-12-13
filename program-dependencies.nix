@@ -17,6 +17,8 @@
         networkmanagerapplet #the applet
         google-chrome #your browser
         adwaita-icon-theme
+        arc-theme
+        htop
     shotman #a lightweight screenshotter
         dunst #lightweight notification daemon
         auto-cpufreq #optimize battery
