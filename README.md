@@ -5,7 +5,8 @@
 * Beautiful colors
 * Wallpaper
 * Configured rofi
-* Optimal battery for laptops by using auto-cpufreq
+* Script menu for switching wallpapers
+* Script menu for system control (reboot,shutdown,suspend,exit sway)
 ### Why use a wayland compositor?
 * Optimizations (uses less battery than a full desktop environment by a huge amount)
 * Smooth and snappy experience
