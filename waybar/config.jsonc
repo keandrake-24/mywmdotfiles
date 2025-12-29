@@ -14,12 +14,12 @@
          "sway/window"
     ],
     "modules-center": [
+	"clock"
     ],
     "modules-right": [
        "pulseaudio",
         "backlight",
         "battery",
-        "clock",
         "tray"
     ],
     // Modules configuration

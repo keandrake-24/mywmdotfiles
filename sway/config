@@ -35,9 +35,9 @@ exec --no-startup-id nm-applet
 exec waybar
 exec dunst
 exec swayidle -w \
-	timeout 180 'sudo brightnessctl s 0' \
-	resume 'sudo brightnessctl s 20%'
-
+    timeout 180 'gtklock -f -L "sudo brightnessctl s 5%"' \
+    resume 'sudo brightnessctl s 20% ' \
+    before-sleep 'pgrep gtklock || gtklock -d'
 
 #audio keybinds
 bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5
@@ -166,6 +166,11 @@ bindsym $mod+Shift+r restart
 #actions
 bindsym $mod+Shift+e exec  ~/.config/scripts/actions.sh
 bindsym $mod+Shift+w exec  ~/.config/scripts/wallpapers.sh
+
+#scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
 #resize windows, you can also use right mouse button 
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode

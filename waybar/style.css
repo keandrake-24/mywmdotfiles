@@ -17,7 +17,7 @@
   margin: 5px;
   margin-right: 2px;
   background-color: @surface0;
-  border-radius: 0.2rem;
+  border-radius: 1rem;
   margin-left: 1rem;
   padding: 0px 5px;
 }
@@ -54,12 +54,11 @@
   background-color: @surface0;
   padding: 0.5rem 1rem;
   margin: 5px 0;
-  border-radius: 0.2rem;
+  border-radius: 1rem;
 }
 
 #clock {
   color: @blue;
-  border-radius: 0.2rem;
 }
 
 #battery {
@@ -78,14 +77,10 @@
   color: @yellow;
 }
 
-#backlight, #battery {
-    border-radius: 0.2rem;
-}
 
 #pulseaudio {
   color: @maroon;
   margin-left: 1rem;
-  border-radius: 0.2rem;
 }
 
 #custom-music {
@@ -94,6 +89,5 @@
 
 
 #tray {
- border-radius: 0.2rem;
  margin-right: 1rem;
 }
