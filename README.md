@@ -20,7 +20,7 @@
 * nwg-look (gtk theme and icon setter for wayland compositors)
 * shotman (for lightweight screenshotting, no fuss, simple and works)
 * network-manager-applet (manage the internet by tray item)
-* swaylock for sway
+* gtklock for sway
 * swayidle for sway
 ### Dependencies
 * brightnessctl for controlling brightness
