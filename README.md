@@ -37,6 +37,7 @@
 * cava (cool terminal audio visualizer)
 * ranger (vim like terminal file manager)
 * vlc (viewing videos)
+* Handbrake (awesome open source video transcoder)
 * fastfetch (display everything about your system in neat form)
 * starship (makes your terminal look good )
 * auto-cpufreq (optimizes battery usage on laptops up to 150%)
