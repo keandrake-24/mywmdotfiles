@@ -18,6 +18,7 @@
 * Alacritty 
 * dunst (notification daemon)
 * nwg-look (gtk theme and icon setter for wayland compositors)
+* lxappearance (or nwg-look whatever is in your package manager repositories, they both are the same)
 * shotman (for lightweight screenshotting, no fuss, simple and works)
 * network-manager-applet (manage the internet by tray item)
 * gtklock for sway
@@ -28,7 +29,7 @@
 * xdg-desktop-portal for common functionalities in flatpak
 * xdg-desktop-portal-wlr backend for wlroots (sway)
 * arc-theme (our gtk theme)
-* adwaita-icon-theme (our icon pack)
+* papirus-icon-theme (the icon theme, fits well with arc-theme and our setup)
 * Jetbrains Mono font for waybar
 * noto-sans font
 * Font-awesome for waybar text icons (glyphs)
