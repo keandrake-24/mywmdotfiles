@@ -3,8 +3,8 @@
 !/alacritty/
 !/waybar/
 !/sway/
-!/sway/**
-/sway/wallpaper
+!/sway/
+!/gtklock/
 !/rofi/
 !/scripts/
 !/wallpapers/
