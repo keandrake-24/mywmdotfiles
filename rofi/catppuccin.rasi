@@ -117,6 +117,7 @@ listview {
     fixed-height: false;
     dynamic: true;
     lines: 10;
+    
 }
 scrollbar {
     width:        4px ;
