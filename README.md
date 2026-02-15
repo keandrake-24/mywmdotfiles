@@ -23,6 +23,7 @@
 * network-manager-applet (manage the internet by tray item)
 * gtklock for sway
 * swayidle for sway
+* wdisplays for displays
 ### Dependencies
 * brightnessctl for controlling brightness
 * pulsemixer for controlling audio
