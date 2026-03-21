@@ -1,6 +1,52 @@
-ln -s  */  ~/.config/
+cp -r  */  ~/.config/
 sudo cp -rv wallpapers/ /usr/share/backgrounds
-sudo dnf copr enable wef/gtklock
-sudo dnf copr enable elxreno/jetbrains-mono-fonts -y
-sudo dnf install waybar rofi alacritty dunst lxappearance network-manager-applet gtklock thunar swayidle brightnessctl pulsemixer arc-theme papirus-icon-theme jetbrains-mono-fonts fontawesome-fonts-all xdg-desktop-portal xdg-desktop-portal-wlr
+CORE=(
+    sway
+    swayidle
+    swaybg
+    xorg-xwayland
+    xdg-desktop-portal
+    xdg-desktop-portal-wlr
+)
+PROGRAMS=(
+    waybar
+    rofi
+    alacritty
+    dunst
+    nwg-look
+    network-manager-applet
+)
+DEPS=(
+    brightnessctl
+    pulsemixer
+    papirus-icon-theme
+    ttf-jetbrains-mono
+    noto-fonts
+    ttf-font-awesome
+)
+ 
+AUR=(
+    shotman
+    gtklock
+    arc-gtk-theme
+    wdisplays
+)
+#official repos
+OPTIONAL=(
+    thunar
+    cava
+    ranger
+    vlc
+    handbrake
+    fastfetch
+    starship
+)
+ 
 
+OPTIONAL_AUR=(
+    auto-cpufreq
+)
+
+echo "install core apps.."
+sleep 2
+sudo pacman -S "${CORE[@]}" "${PROGRAMS[@]}" "${DEPS[@]}"
