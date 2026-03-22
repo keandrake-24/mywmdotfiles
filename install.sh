@@ -30,6 +30,7 @@ AUR=(
     gtklock
     arc-gtk-theme
     wdisplays
+    lx-polkit-git
 )
 #official repos
 OPTIONAL=(
