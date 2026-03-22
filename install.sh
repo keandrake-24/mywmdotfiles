@@ -50,3 +50,19 @@ OPTIONAL_AUR=(
 echo "install core apps.."
 sleep 2
 sudo pacman -S "${CORE[@]}" "${PROGRAMS[@]}" "${DEPS[@]}"
+sudo yay -S "${AUR[@]}" 
+echo "do you want to install optionals???????????????? from the official repos (y/n): "
+read install
+if [ "$install" == "y" ];  then
+    echo "ok installing..."
+    sleep 2
+    sudo pacman -S "${OPTIONAL[@]}"
+fi
+
+echo "do you want to install the one AUR optional: auto-cpufreq for laptop batteries?? (y/n): "
+read install
+if [ "$install" == "y" ];  then
+    echo "ok installing..."
+    sleep 2
+    sudo yay -S auto-cpufreq
+fi
