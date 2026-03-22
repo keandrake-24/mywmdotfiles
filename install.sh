@@ -23,6 +23,8 @@ DEPS=(
     ttf-jetbrains-mono
     noto-fonts
     ttf-font-awesome
+    otf-font-awesome
+    woff2-font-awesome
 )
  
 AUR=(
