@@ -21,9 +21,9 @@
 * lxappearance (or nwg-look whatever is in your package manager repositories, they both are the same)
 * shotman (for lightweight screenshotting, no fuss, simple and works)
 * network-manager-applet (manage the internet by tray item)
-* gtklock for sway
+* gtklock for screen locking
 * swayidle for sway
-* wdisplays for displays
+* wdisplays for displays setting
 ### Dependencies
 * brightnessctl for controlling brightness
 * pulsemixer for controlling audio
@@ -38,7 +38,7 @@
 * Thunar (file manager)
 * cava (cool terminal audio visualizer)
 * ranger (vim like terminal file manager)
-* vlc (viewing videos)
+* celluloid for videos
 * Handbrake (awesome open source video transcoder)
 * fastfetch (display everything about your system in neat form)
 * starship (makes your terminal look good )
