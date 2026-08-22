@@ -1,7 +1,7 @@
 cp -r  */  ~/.config/
 sudo cp -rv wallpapers/ /usr/share/backgrounds
 CORE=(
-    sway
+    
     swayidle
     swaybg
     xorg-xwayland
@@ -27,7 +27,8 @@ DEPS=(
     woff2-font-awesome
 )
  
-AUR=(
+AUR=( 
+    swayfx
     shotman
     gtklock
     arc-gtk-theme
