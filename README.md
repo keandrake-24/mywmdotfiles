@@ -1,4 +1,4 @@
-# Catppuccin Themed Sway Dotfiles
+# Catppuccin Themed Swayfx Dotfiles
 
 ## Features
 * Cute looking thick waybar

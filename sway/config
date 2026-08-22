@@ -27,7 +27,6 @@ set $mantle #1e2030
 set $crust #181926
 
 set $mod Mod4
-
 font pango:JetBrains Mono Regular 12
 #startup commandsh
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway XDG_SESSION_DESKTOP=sway #this tells xdg-desktop-portal that we are using sway
@@ -35,23 +34,30 @@ exec --no-startup-id nm-applet
 exec waybar
 exec dunst
 exec swayidle -w \
-    timeout 180 'sudo brightnessctl s 5%'  \
-    timeout 300 'systemctl suspend' \
+    timeout 180 'brightnessctl s 5%'  \
+    timeout 600 'systemctl suspend' \
     before-sleep 'pgrep gtklock || gtklock -d'
-exec lxpolkit #polkit for authorization stuff for sandboxed apps like fedora media writer on flatpak
-
+exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 #polkit for authorization stuff for sandboxed apps like fedora media writer on flatpak
+exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr
 #audio keybinds
 bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5
 bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5
 bindsym XF86AudioMute exec --no-startup-id pulsemixer --toggle-mute
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
 #use brightnessctl for brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id sudo brightnessctl s +5% 
-bindsym XF86MonBrightnessDown exec --no-startup-id  sudo brightnessctl s 5%-
+bindsym XF86MonBrightnessUp exec --no-startup-id  brightnessctl s +5% 
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 5%-
 
+bindsym Shift+Print exec shotman --capture region
+bindsym Control+Print exec shotman --capture window
 bindsym Print exec shotman --capture output
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+#obs
+bindsym $mod+F5 exec obs-cmd --websocket "obsws://localhost:4455/mKZeFrLXxCCkHTI8" replay save
+
+
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
@@ -207,3 +213,17 @@ client.unfocused         $overlay0 $base $text  $rosewater $overlay0
 client.urgent            $peach    $base $peach $overlay0  $peach
 client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
+
+
+
+#swayfx stuff
+animation_duration_ms 250
+blur enable
+blur_xray disable
+blur_radius 5
+corner_radius 20
+
+shadows enable
+shadow_blur_radius 10
+shadow_offset 10 5
+
